@@ -256,16 +256,16 @@ h4 {
 }
 
 .btn-full {
-  width: 100%;
   display: block;
+  width: 100%;
   text-align: center;
 }
 
 .hero-actions {
   display: flex;
-  flex-wrap: wrap;
-  /* both buttons doesnt fit in one line it moves to next line */
   gap: 12px;
+  flex-wrap: wrap;
+  /* if both buttons dont fit in same line then it wraps to next line */
 }
 
 .about {
@@ -283,8 +283,8 @@ h4 {
 .about-text p {
   font-size: 1rem;
   line-height: 1.7;
-  margin-bottom: 16px;
   color: #7a6f67;
+  margin-bottom: 16px;
 }
 
 .tech-card {
@@ -300,8 +300,8 @@ h4 {
   font-weight: 600;
   letter-spacing: 0.12rem;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.6);
   margin-bottom: 24px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .tech-list {
@@ -316,14 +316,14 @@ h4 {
   align-items: center;
   gap: 10px;
   font-size: 0.9rem;
-  box-shadow: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .tech-icon {
   width: 22px;
   text-align: center;
   flex-shrink: 0;
-  /* even if space is tight, the icon size never shrink below 22px */
+  /* even if the screen space is tight the size of logo doesnot shrink */
 }
 
 .tech-exploring {
@@ -343,8 +343,8 @@ h4 {
 
 .exploring-tech {
   font-size: 0.9rem;
-  font-weight: 500;
   font-style: italic;
+  font-weight: 500;
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -352,16 +352,15 @@ h4 {
   padding: 100px 0;
   background-color: #f5f0eb;
 }
-
 .work-header {
   margin-bottom: 40px;
 }
 
 .heading-subtitle {
   font-size: 0.9rem;
-  line-height: 1.5;
   color: #7a6f67;
   max-width: 420px;
+  line-height: 1.5;
   margin-top: 8px;
 }
 
@@ -371,16 +370,16 @@ h4 {
   border-radius: 20px;
   overflow: hidden;
   background-color: #fff;
-  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   transition:
     box-shadow 0.3 ease,
     transform 0.3 ease;
 }
 
 .project-card:hover {
-  box-shadow: 0 20px 48px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.14);
   transform: translateY(-4px);
-  /* when hovered card moves slightly up */
+  /* card moves up when hovered */
 }
 
 .project-image-wrapper {
@@ -397,7 +396,6 @@ h4 {
 
 .project-card:hover .project-image {
   transform: scale(1.04);
-  /* when project card is hovered we are styling the project image inside it */
 }
 
 .project-info {
@@ -411,9 +409,9 @@ h4 {
 .project-type {
   font-size: 0.7rem;
   font-weight: 600;
+  color: #c0451e;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
-  color: #c0451e;
 }
 
 .project-title {
@@ -425,14 +423,143 @@ h4 {
 }
 
 .project-desc {
-  font-size: 0.9rem;
+  font-size: 0.9;
+  line-height: 1.6;
+  color: #7a6f67;
+}
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  /* if all tags dont fit in same line it goes to next line */
+  gap: 8px;
+}
+
+.tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border: 1px solid #e5ddd6;
+  border-radius: 999px;
+  color: #7a6f67;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #c0451e;
+  transition: gap 0.5sec ease;
+}
+
+.project-link:hover {
+  gap: 10px;
+}
+
+.voyage-contact {
+  padding: 100px 0;
+  background-color: #fff;
+}
+
+.voyage-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  /* auto= datecolumn exactly as wide as text content */
+  gap: 20px;
+}
+
+.timeline-date {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #c0451e;
+  white-space: nowrap;
+  /* prevents 2026 — Present to break into two line */
+  padding-top: 3px;
+}
+
+.timeline-role {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1714;
+  margin-bottom: 6px;
+}
+
+.timeline-desc {
+  font-size: 0.85rem;
   line-height: 1.6;
   color: #7a6f67;
 }
 
-.project-tags {
+.contact-form {
   display: flex;
-  flex-wrap: wrap;
-  /* if all the tags doesnt fit in same line it goes to next line */
-  gap: 8px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  color: #7a6f67;
+  text-transform: uppercase;
+}
+
+.form-input {
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: #1a1714;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #e5ddd6;
+  padding: 8px 0;
+  outline: none;
+  /* Outline removes browser default focus ring */
+  width: 100%;
+  transition:
+    border-bottom color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-input:focus {
+  border-bottom-color: #c0451e;
+  box-shadow: 0 2px 0 0 #c0451e;
+}
+
+.form-input::placeholder {
+  color: rgba(122, 111, 103, 0.5);
+  font-style: italic;
+}
+
+.form-textarea {
+  resize: vertical;
+  /* vertical can only make text taller not wider */
+  min-height: 100px;
+}
+
+.site-footer {
+  padding: 32px 0;
+  background-color: #f5f0eb;
+  border-top: 1px solid #e5ddd6;
 }
